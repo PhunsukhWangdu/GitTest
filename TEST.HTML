@@ -1,0 +1,220 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>test</title>
+	<script type="text/javascript">
+  zifu="lalasazi"
+  anc=zifu.anchor("anc")
+  document.write("anc")
+  
+  function accesskey(){
+  document.getElementById("w3").accessKey="w";
+  document.getElementById("w3dom").accessKey="o";
+  
+   }
+  function changelink(){
+  alert("change");
+    document.getElementById('chaglik').innerHTML="天天开心";
+  	document.getElementById('chaglik').href="http://www.taobao.com";
+  	document.getElementById('chaglik').target="_self";
+  	document.write("<p>动态添加</p>") 
+  	}
+  	function getfocus(){
+  	alert("focus");
+  	document.getElementById("memeda").focus();
+  	}
+  	function releasefocus(){
+  	alert("releasefocus");
+  	document.getElementById("memeda").blur();
+  	}
+  	
+  	function returntitle(){
+  	alert("returntitle");
+  	document.write(document.title);
+  	}
+  	
+  	function returnurl(){
+  	alert("returnurl");
+  	document.write(document.URL);
+  	}
+  	function returnrefer(){
+  	alert("returrefer");
+  	document.write(document.referer);
+  	}
+  	function returndomain(){
+  	alert("returdomain");
+  	document.write(document.domain);
+  	}
+  	function createNewDoc(){
+  	var newDoc=document.open("text/html","replace");
+  	var text="<html><body>学习dom有趣。。。</body></html>";
+  	newDoc.write(text);
+  	newDoc.close();
+  	}
+  	function returnanc(){
+  		document.write(document.anchors.length)
+  		document.write(document.anchors[0].innerHTML)
+  	}
+  	function formcount(){
+  		document.write(document.forms.length+"个表单")
+  		document.write(document.images.length+"个图像")
+  	}
+  	function formethod(){
+  		var x;
+  		var txt="";
+  		var person={fname:"BillGates",age:22};
+  		for(x in person){
+  			txt=txt+person[x];
+  			/*document.write(txt)*/
+  		}
+  		document.getElementById("demo").innerHTML=txt;
+  	}
+
+  	function whichButton(event){
+  		var btnNum = event.button;
+  		if (btnNum==0)
+  		{
+  			alert("左键")
+  		}
+  		else if(btnNum==1)
+  		{
+  			alert("中键")
+  		}
+  		else if(btnNum==2){
+  			alert("右键")
+  		}
+  		else{
+  		 alert("您点击了" + btnNum+ "号键，我不能确定它的名称。");
+  		}
+
+  	}
+
+
+  	</script>
+</head>
+
+
+<body><!-- onmousedown="whichButton(event)" bgcolor="green" -->
+<acronym title="World">W</acronym>
+	<p>
+		<a id="chaglik" href="http://www.baidu.com">哈哈哈</a> <input
+			type="button" onclick="changelink()" value="改变链接" id="change"></input>
+	</p>
+	<p>
+		<a id="memeda" href="http://www.taobao.com">中奖的彩票</a> 
+		<input type="button" onclick="getfocus()" value="getfocus()" value="获得焦点">
+		<input type="button" onclick="releasefocus()" value="releasefocus()"
+			value="释放焦点">
+	</p>
+	<p>
+		lalala<a href="#anc">引用</a>
+	</p>
+	<p>
+		<a id="w3" href="http://www.taobao.com">去淘宝啦</a> （请使用 Alt +
+		w 给该链接赋予焦点）
+	</p>
+	<p>
+		<a id="w3dom" href="http://www.baidu.com">去百度啦</a> （请使用 Alt + o
+		为该链接赋予焦点）
+	</p>
+	<p>
+	<a onclick="returntitle()" href="javascript:void(0)">返回文档标题</a>
+	</p>
+	<p>
+	<a onclick="returnurl()" href="javascript:void(0)">返回url</a>
+	</p>
+	<p>
+	<a onclick="returnrefer()" href="javascript:void(0)">referrer 属性返回加载本文档的文档的 URL</a>
+	</p>
+	<p>
+	<a onclick="returndomain()" href="javascript:void(0)">本文档的域名是：</a>
+	</p>
+	<p>
+	<input type="button" value="打开并写入一个新文档" onclick="createNewDoc()">
+	</p>
+	<p>
+	<input type="button" value="返回锚点" onclick="returnanc()">
+	</p>
+	<p>
+	<input type="button" value="页面表单数" onclick="formcount()">
+	</p>
+	<p>
+	<input type="button" value="for循环函数" onclick="formethod()">
+	<p id="demo"></p>
+
+	</p>
+	<p>
+	<input type="button" value="按了鼠标哪个键" >
+	</p>
+	<p>
+	<bdo dir="rtl">
+	dlroW olleh
+	</p>
+	<blockquote>
+		这里是长引用，浏览器会插入换行和外边距，而 q 元素不会有任何特殊的呈现。
+	</blockquote>
+	<p>惊爆价<del>20</del>元<ins>15</ins></p>
+	<p>
+<a href="/index.html">本文本</a> 是一个指向本网站中的一个页面的链接。</p>
+
+<p><a href="http://www.microsoft.com/">本文本</a> 是一个指向万维网上的页面的链接。</p>
+<p>
+	<a href="http://www.taobao.com"><img src="C:\Users\Administrator\Desktop\QQ图片20150419155036.png">
+</p>
+<a href="http://www.w3school.com.cn/" target="_self">Visit W3School!</a>
+
+<p>如果把链接的 target 属性设置为 "_blank"，该链接会在新窗口中打开。</p>
+
+<p>
+<a href="#C10">查看 Chapter 10。</a>
+</p>
+
+<h2>Chapter 1</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2>Chapter 2</h2>
+<p>This chapter explains ba bla bla</p>
+<h2><a id="C10">Chapter 10</a></h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2>Chapter 11</h2>
+<a href="/index.html"
+target="_top">跳出框架 请点击这里！</a> 
+<frameset rows="50%,50%">
+
+<frame src="http://www.taobao.com">
+  <frame src="http://www.baidu.com">
+  </frameset>
+
+  <frameset cols="120,*">
+  <frame src="/example/html/frame_a.html" noresize="noresize" /> 不可调整框架大小
+  <frame src="/example/html/frame_b.html" />
+</frameset>
+<p>
+内联框架
+<iframe src="C:\Users\Administrator\Desktop\QQ图片20150419155036.png"></iframe>
+</p>
+
+<frameset cols="20%,80%">
+
+ <frame src="C:\Users\Administrator\Desktop\TEST.HTML">
+ <frame src="C:\Users\Administrator\Desktop\TEST.HTMLid#C10">
+
+</frameset>
+<table border="6">
+<caption>我的标题</caption>
+<tr>
+  <th rowspan="2">两行宽</td>
+  <td>6666</td>
+</tr>
+<tr><td>6666</td></tr>
+<tr><th>6666</th></tr>
+<tr>
+  <th colspan="2">两列宽</td>
+  <td>6666</td>
+</tr>
+
+</body>
+</html>
