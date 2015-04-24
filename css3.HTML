@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<meta charset="UTF-8">
+<html>
+<head>
+<style> 
+@font-face
+{
+font-family: myFirstFont;
+src: url('/example/css3/Sansation_Light.ttf')
+    ,url('/example/css3/Sansation_Light.eot'); /* IE9+ */
+}
+
+div
+{
+font-family:myFirstFont;
+}
+body
+{
+background:url(cherryontop-o-cat.png),url(007.jpg);
+background-size:1000px 100%;
+-moz-background-size:63px 100px; /* 老版本的 Firefox */
+background-repeat:no-repeat;
+background-position:right;
+padding-top:80px;
+padding-left:100px;
+}
+div
+{
+border:15px solid transparent;
+width:300px;
+padding:10px 20px;
+}
+
+#eee{
+text-align:center;
+border:2px solid #a1a1a1;
+padding:10px 40px; 
+background:#FFFF66;
+width:350px;
+border-radius:25px;
+-moz-border-radius:25px; /* 老的 Firefox */
+}
+#sss{
+width:300px;
+height:100px;
+background-color:#CCFFFF;
+-moz-box-shadow: 10px 10px 5px #888888; /* 老的 Firefox */
+box-shadow: 10px 10px 5px #888888;
+}
+#round
+{
+-moz-border-image:url("C:\Users\Administrator\Desktop\222.jpg") 30 30 round;	/* Old Firefox */
+-webkit-border-image:url("C:\Users\Administrator\Desktop\222.jpg") 30 30 round;	/* Safari and Chrome */
+-o-border-image:url("C:\Users\Administrator\Desktop\222.jpg") 30 30 round;		/* Opera */
+border-image:url(222.jpg) 30 30 round;
+}
+
+#stretch
+{
+-moz-border-image:url("C:\Users\Administrator\Desktop\222.jpg") 30 30 stretch;	/* Old Firefox */
+-webkit-border-image:url("C:\Users\Administrator\Desktop\222.jpg") 30 30 stretch;	/* Safari and Chrome */
+-o-border-image:url("C:\Users\Administrator\Desktop\222.jpg") 30 30 stretch;	/* Opera */
+border-image:url(222.jpg) 30 30 stretch;
+}
+
+#div1
+{
+background-image:url('3.jpg');
+background-repeat:no-repeat;
+background-position:left;
+background-origin:border-box;
+width:11em; 
+border:1px solid #000000;
+word-wrap:break-word;
+}
+#div2
+{
+background-image:url('3.jpg');
+background-repeat:no-repeat;
+background-position:left;
+background-origin:content-box;
+}
+
+h1
+{
+text-shadow: 5px 5px 5px #FF0000;
+}
+
+</style>
+</head>
+<body>
+
+<div id="eee">border-radius 圆角。</div>
+<div id="sss"></div>
+<div id="round">边框图片铺满整个边框。</div>
+<br>
+<div id="stretch">边框图片被拉伸以填充该区域。</div>
+
+<p>边框图片：</p>
+<img src="222.jpg">
+
+<p>background-origin:border-box:</p>
+<div id="div1">
+自动换行。自动换行。自动换行。自动换行。自动换行。自动换行。自动换行。自动换行。自动换行。自动换行。自动换行。自动换行。自动换行。自动换行。自动换行。自动换行。自动换行。自动换行。自动换行。自动换行。自动换行。自动换行。自动换行。自动换行。
+</div>
+
+<p>background-origin:content-box:</p>
+<div id="div2">
+这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。
+</div>
+
+<h1>文本阴影效果</h1>
+
+</body>
+</html>
